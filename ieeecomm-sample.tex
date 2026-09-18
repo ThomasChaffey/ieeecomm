@@ -1,0 +1,153 @@
+\documentclass[journal,twoside,web]{ieeecomm}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{algorithm,algorithmic}
+\usepackage[caption=false]{subfig}
+\usepackage{tikz}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+% Journal name for the running head and the accent colour (normally supplied
+% by a journal .sty file such as generic.sty or tac.sty).
+\def\journalname{IEEE TRANSACTIONS AND JOURNALS TEMPLATE}
+\definecolor{subsectioncolor}{rgb}{0,0.263,0.576}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\title{Sample Article for the Rebuilt Colour Class with $\mathcal{H}_\infty$ and \revised{Highlighted} Maths}
+\author{First A. Author, \IEEEmembership{Fellow, IEEE}, Second B. Author, and Third C. Author Jr., \IEEEmembership{Member, IEEE}
+\thanks{This paragraph of the first footnote has a blank line in it.
+
+Second paragraph of the same \texttt{\string\thanks}, which fails in V1.7.}
+\thanks{Second B. Author Jr. was with Rice University, Houston, TX 77005 USA.}}
+\markboth{Journal of \LaTeX\ Class Files, Vol.~14, No.~8, August 2021}%
+{Author \MakeLowercase{\textit{et al.}}: A Test of the Rebuilt Colour Class}
+\maketitle
+\begin{abstract}
+This abstract contains inline maths $x^2 + \mu_0 H$ that must be in the normal math italic, not upright sans. \revised{This sentence is a revision inside the abstract.}
+\end{abstract}
+\begin{IEEEkeywords}
+Index terms, $\ell_1$ norm, testing.
+\end{IEEEkeywords}
+
+\section{Introduction}
+\IEEEPARstart{T}{his} document exercises the class. A citation \cite{a,b,c} and a reference to Section~\ref{sec:two}, Fig.~\ref{fig:one}, Table~\ref{tab:one} and \eqref{eq:one}.
+
+\revised{This whole paragraph is a revision. It has inline maths $a = b + \frac{1}{2}$, and it continues.
+
+It also has a second paragraph, and a display:
+\begin{equation}
+  \int_0^\infty e^{-st} f(t)\,dt = F(s), \label{eq:one}
+\end{equation}
+and text after the display.} Text after the revision is black again, with maths $c = d$.
+
+Inline revised maths: $a + \revised{b} = c$, $x \revised{=} y$, and $\revised{\sum_{k=1}^n k}$.
+
+\begin{revision}
+A block revision with an alignment:
+\begin{align}
+  a &= b + c, \label{eq:al}\\
+  d &= e - f.
+\end{align}
+And an IEEEeqnarray:
+\begin{IEEEeqnarray}{rCl}
+  g & = & h \IEEEyesnumber \IEEEyessubnumber \\
+  i & = & j. \IEEEyessubnumber
+\end{IEEEeqnarray}
+\begin{itemize}
+\item A list item, revised.
+\item Another.
+\end{itemize}
+\end{revision}
+Black again.
+
+\subsection{Subsection Heading With Maths $\mathbf{H}$}
+Text. \revised{Short.} More.
+\subsubsection{Run-in Heading $x$}
+Text following the run-in heading continues in the same paragraph and must be black and 10pt.
+\paragraph{Paragraph Heading}
+Text.
+
+\section*{Unnumbered Section}
+Must be centred exactly like a numbered one.
+
+\begin{figure}[!t]
+\centering
+\begin{tikzpicture}\fill[nblue] (0,0) rectangle (2,1); \draw[subsectioncolor] (0,0) -- (2,1);\end{tikzpicture}
+\caption{Short caption, centred.}
+\label{fig:one}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\subfloat[First]{\rule{1in}{0.75in}\label{fig:a}}
+\hfil
+\subfloat[Second]{\rule{1in}{0.75in}\label{fig:b}}
+\caption{A longer caption that certainly wraps around onto a second line so that the wrapped branch of the caption code is exercised, with \revised{a revised phrase} and maths $\alpha$.}
+\end{figure}
+
+\begin{table}[!t]
+\caption{A Table Caption in Small Caps}
+\label{tab:one}
+\centering
+\begin{tabular}{c|c}
+\hline
+One & Two\\
+\hline
+$x$ & $y$\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table*}[!t]
+\caption{A Double Column Table}
+\centering
+\begin{tabular}{c|c}
+\hline
+One & Two\\
+\hline
+\end{tabular}
+\end{table*}
+
+\begin{algorithm}[!t]
+\caption{An algorithm}
+\begin{algorithmic}
+\STATE $x \leftarrow 0$
+\end{algorithmic}
+\end{algorithm}
+
+\section{Second}
+\label{sec:two}
+\begin{theorem}
+An amsthm theorem.
+\end{theorem}
+\begin{proof}
+An amsthm proof, since amsthm is loaded.
+\end{proof}
+\begin{IEEEproof}
+An IEEEtran proof.
+\end{IEEEproof}
+Filler. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text.
+
+\appendices
+\section{First Appendix}
+Appendix text.
+
+\section*{Acknowledgment}
+Thanks.
+
+\begin{thebibliography}{1}
+\bibitem{a} A. Author, ``A paper,'' \emph{IEEE Trans. Autom. Control}, vol. 1, no. 1, pp. 1--2, 2020.
+\bibitem{b} B. Author, ``Another paper,'' \emph{IEEE Trans. Autom. Control}, vol. 1, no. 1, pp. 1--2, 2020.
+\bibitem{c} C. Author, ``A third paper,'' \emph{IEEE Trans. Autom. Control}, vol. 1, no. 1, pp. 1--2, 2020.
+\end{thebibliography}
+
+\begin{IEEEbiography}[{\rule{1in}{1.25in}}]{First A. Author}
+Biography text with maths $\sigma$. Biography text. Biography text. Biography text. Biography text. Biography text.
+\end{IEEEbiography}
+\begin{IEEEbiographynophoto}{Second B. Author}
+No photo biography.
+\end{IEEEbiographynophoto}
+\begin{biography}{Third C. Author}
+Old-name biography.
+\end{biography}
+\end{document}
