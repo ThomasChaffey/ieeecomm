@@ -1,4 +1,4 @@
-# ieeecomm.cls v1.0: community version of ieeecolor.cls V1.7
+# ieeecomm: community version of ieeecolor
 
 This class is a community version of the ieeecolor.cls class for IEEE journal papers.  It loads the current IEEEtran (V1.8b) and adds the ieeecolor.cls colour-template appearance on top. 
 
