@@ -12,7 +12,7 @@ This class is a community version of the ieeecolor.cls class for IEEE journal pa
 6. `\journalname` sets the running head automatically; `\markboth` overrides.
 7. Options `print`, `nocolor`, `noheadrule`; `web` is the default.
 8. Works with `caption`, `subcaption` and `subfig`.
-9. `\ProvidesClass{ieeecolor}`.
+9. `\ProvidesClass{ieeecomm}`.
 10. Heading sizes follow the size option.
 
 ## Bug fixes
